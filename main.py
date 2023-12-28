@@ -72,8 +72,7 @@ if __name__ == '__main__':
             deviceid = config['deviceid']
             devicename = config['devicename']
             devicemodel = config['devicemodel']
-            appid = config['appid']
-            if token == '' or android == 0 or deviceid == '' or devicemodel == '' or appid == 0:
+            if token == '' or android == 0 or deviceid == '' or devicemodel == '':
                 raise RunError(f'请确认您的配置文件配置正确再运行本程序！')
         headers = {
             'x-rpc-combo_token': token,
