@@ -95,7 +95,7 @@ if __name__ == '__main__':
             'User-Agent': 'okhttp/4.9.0'
         }
         bbsid = re.findall(r'oi=[0-9]+', token)[0].replace('oi=', '')
-        wait_time = random.randint(1, 3600) # Random Sleep to Avoid Ban
+        wait_time = 3 # Random Sleep to Avoid Ban
         print(f'为了避免同一时间签到人数太多导致被官方怀疑，开始休眠 {wait_time} 秒')
         time.sleep(wait_time)
         wallet = r.get(WalletURL, headers=headers, timeout=60)
